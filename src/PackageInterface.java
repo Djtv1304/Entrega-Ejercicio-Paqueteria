@@ -1,12 +1,11 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 
-public class PackageInterface {
+public class PackageInterface extends JFrame {
     private JTabbedPane tabbedPane1;
-    private JPanel panel1;
+    public JPanel panelPrincipal;
     private JTextField textFieldEstimedTIme;
     private JButton agregarPaqueteButton;
     private JTextField textFieldNumeroRemover;
@@ -28,10 +27,10 @@ public class PackageInterface {
     private JButton buscarPorDestinatarioButton;
     private JButton buscarPorSeguimientoButton;
     private JButton buscarPorCiudadButton;
-    private TrackingSystem System;
+    private TrackingSystem System = System = new TrackingSystem();;
 public PackageInterface() {
 
-    System = new TrackingSystem();
+
 
     agregarPaqueteButton.addActionListener(new ActionListener() {
         @Override
@@ -78,6 +77,7 @@ public PackageInterface() {
     insertarDatosQuemadosButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
+
             Address Sender = new Address("Diego Toscano","Quito","Pichincha","170409");
             Address Recipient = new Address("Rommel Toscano","Queens", "New York","123456");
 
@@ -89,6 +89,7 @@ public PackageInterface() {
 
             System.addPackage(Paquete);
             System.addPackage(Paquete2);
+
 
         }
     });

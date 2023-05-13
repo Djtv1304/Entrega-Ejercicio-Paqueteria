@@ -15,13 +15,20 @@ public class TrackingSystem {
     }
 
     public void addPackage(Package pkg) {
-        for (Package p:packages) {
-            if (p.getTrackingNumber().equals(pkg.getTrackingNumber())) {
-                JOptionPane.showMessageDialog(null,"El TrackingNumber ya pertenece a otro paquete.");
-            } else {
-                packages.add(pkg);
+        /*if (!packages.isEmpty()) {
+            for (Package p:packages) {
+                if (p.getTrackingNumber().equals(pkg.getTrackingNumber())) {
+                    JOptionPane.showMessageDialog(null,"El TrackingNumber ya pertenece a otro paquete.");
+                } else {*/
+                    packages.add(pkg);
+                    System.out.println("Entreee");
+                /*}
             }
-        }
+        }else {
+            packages.add(pkg);
+            System.out.println("Entreee BIEN");
+        }*/
+
 
     }
 
